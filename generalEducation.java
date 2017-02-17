@@ -1,32 +1,35 @@
 import java.util.ArrayList;
 
-public class generalEducation extends degreeProgram{
+public class generalEducation {
 
 	//Index each one!!! Arraylist it!
-	//public static ArrayList <uogClass> classList = new ArrayList <uogClass>();
+	public ArrayList <uogClass> classList = new ArrayList <uogClass>();
+	public String degreeName;
 	
 	//Assign All of the names for the classes
 	public generalEducation(){
 		this.degreeName = "General Education";
-		classList.add(new uogClass("EN110", 0, 3));
-		classList.add(new uogClass("EN111", 0, 3));
-		classList.add(new uogClass("CO210", 0, 3));
-		classList.add(new uogClass("Mathematics", 0, 3));
-		classList.add(new uogClass("Statistics or Computer Skills", 0, 3));
-		classList.add(new uogClass("The Arts & Creative Expression 1", 0, 3));
-		classList.add(new uogClass("The Arts & Creative Expression 2",0 ,3));
-		classList.add(new uogClass("Global Studies", 0, 3));
-		classList.add(new uogClass("The Individual and Society", 0, 3));
-		classList.add(new uogClass("Foreign Language 1", 0, 4));
-		classList.add(new uogClass("Foreign Language 2", 0, 4));
-		classList.add(new uogClass("Personal Development", 0, 4));
-		classList.add(new uogClass("Regional Studies", 0, 3));
-		classList.add(new uogClass("Science & Lab 1", 0, 4));
-		classList.add(new uogClass("Science & Lab 2", 0, 4));
-		classList.add(new uogClass("The Search for Meaning", 0, 3));
+		this.classList.add(new uogClass("EN110", 0, 3));
+		this.classList.add(new uogClass("EN111", 0, 3));
+		this.classList.add(new uogClass("CO210", 0, 3));
+		this.classList.add(new uogClass("Mathematics", 0, 3));
+		this.classList.add(new uogClass("Statistics or Computer Skills", 0, 3));
+		this.classList.add(new uogClass("The Arts & Creative Expression 1", 0, 3));
+		this.classList.add(new uogClass("The Arts & Creative Expression 2",0 ,3));
+		this.classList.add(new uogClass("Global Studies", 0, 3));
+		this.classList.add(new uogClass("The Individual and Society", 0, 3));
+		this.classList.add(new uogClass("Foreign Language 1", 0, 4));
+		this.classList.add(new uogClass("Foreign Language 2", 0, 4));
+		this.classList.add(new uogClass("Personal Development", 0, 4));
+		this.classList.add(new uogClass("Regional Studies", 0, 3));
+		this.classList.add(new uogClass("Science & Lab 1", 0, 4));
+		this.classList.add(new uogClass("Science & Lab 2", 0, 4));
+		this.classList.add(new uogClass("The Search for Meaning", 0, 3));
 	}
 	
 	public void finishClass(int index, semSchedule currentSched){ //add Schedule field
+		//System.out.println("Looking at index " + index + " ||| Contents: " + classList.get(index).name);
+		
 		switch (index){
 		case 1: //EN 111 Needs EN110 first before scheduling
 			if (classList.get(0).isFinished==true){
@@ -45,6 +48,8 @@ public class generalEducation extends degreeProgram{
 			currentSched.addClass(classList.get(index));
 			break;
 	}
+		
+	//System.out.println("ADDED: " + classList.get(index).name);
 	}
 }
 

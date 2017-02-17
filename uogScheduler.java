@@ -20,7 +20,7 @@ public class uogScheduler{
 
 	private static degreeProgram majorSelected;
 	private static generalEducation genEds = new generalEducation();
-	public static ArrayList <semSchedule> allScheds = new ArrayList <semSchedule>();
+	public ArrayList <semSchedule> allScheds = new ArrayList <semSchedule>();
 	private static int upperDivs = 0;
 	private static int fallSpring;
 	private static int schedNum = 0;
@@ -55,6 +55,19 @@ public class uogScheduler{
 			
 	} //END SWITCH STATEMENT
 	
+	System.out.println("GE: " + genEds.degreeName);
+	for (int j = 0; j < genEds.classList.size(); j++){
+		System.out.print("ClassList index " + j);
+		genEds.classList.get(j).classDetails();
+	}
+	
+	
+	System.out.println("\nMAJOR: " + majorSelected.degreeName);
+	for (int j = 0; j < majorSelected.classList.size(); j++){
+		System.out.println(majorSelected.classList.get(j).getName());
+		majorSelected.classList.get(j).classDetails();
+	}
+	
 	//While all classes aren't finished yet************
 	for (int i = 0; i < 8; i++){ //****************TEST: FOR 2 SEMESTERS
 	allScheds.add(new semSchedule());
@@ -71,9 +84,9 @@ public class uogScheduler{
 
 	
 	/*Print out the contents of the Schedule that was just made*/
-	System.out.println("======" + allScheds.get(i).sname + year  + "========"); 
-	
+	System.out.println("======" + allScheds.get(i).sname + year  + "SchedID: " + schedNum + "========"); 
 	allScheds.get(schedNum).printSched();
+	
 	schedNum++; //Move on to next schedule index
 	fallSpring++;//Increment semester
 		
@@ -83,7 +96,9 @@ public class uogScheduler{
 			year++;
 		}
 		
-	} //END OUTER LOOP TEST FOR 2 SEMESTERS
+	} //END OUTER FOR LOOP TEST FOR 2 SEMESTERS
+	
+	System.out.println("Upper Division Credits: " + upperDivs);
 	
 	} //================END MAIN METHOD========================================================
 	
@@ -94,7 +109,7 @@ public class uogScheduler{
 	 * @param ge: The general eds package of courses
 	 * @param schedID: The schedule index of the allScheds arraylist
 	 */
-	public static void createSchedules(degreeProgram major, generalEducation ge, int schedID){
+	public void createSchedules(degreeProgram major, generalEducation ge, int schedID){
 	int searchIndex = 0;
 
 	while (allScheds.get(schedID).sched.size() <=5){ //Try to schedule 5 classes per semester
@@ -107,7 +122,7 @@ public class uogScheduler{
 	
 	//If index > 300, add num of credits to upperDivs *******
 	for (int i = 0; i<5; i++){
-		if (allScheds.get(schedID).sched.get(i).credits >= 300){
+		if (allScheds.get(schedID).sched.get(i).id >= 300){
 		upperDivs = upperDivs + allScheds.get(schedID).sched.get(i).credits;	
 		}
 	}
@@ -115,5 +130,6 @@ public class uogScheduler{
   searchIndex = 0; //Reset search index
 	
 	}
+	
 	
 }
