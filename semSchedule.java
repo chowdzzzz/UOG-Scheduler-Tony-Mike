@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 public class semSchedule {
-	public static ArrayList <uogClass> sched = new ArrayList <uogClass>();
-	public static String sname; 
+	public ArrayList <uogClass> sched = new ArrayList <uogClass>();
+	public String sname; 
 	/**
 	 * @Purpose: Print the contents of the Arraylist (Schedule)
 	 */
-	public static void printSched(){
+	public void printSched(){
 		for (int i = 0; i < sched.size(); i++){
 			System.out.println(sched.get(i).name);
 		}
@@ -17,10 +17,10 @@ public class semSchedule {
 	}
 	
 	public void setSemName(String givenName){
-		sname = givenName;
+		this.sname = givenName;
 	}
 	
-	public static void addClass(uogClass addThisClass){
+	public void addClass(uogClass addThisClass){
 		sched.add(addThisClass);
 	}
 	

@@ -1,22 +1,28 @@
 public class uogClass {
-	 public static boolean isFinished = false; //Whether the class is finished or not
-	 public static String name; //Name of the class
-	 public static int id; 
-	 public static int credits;
+	 public boolean isFinished = false; //Whether the class is finished or not
+	 public String name; //Name of the class
+	 public int id; 
+	 public int credits;
 	 
-	 public static void assignName(String given){
-		 name = given;
-	 }
-	 
-	 public static void classDone(){
-		 isFinished = true;
-	 }
-	 
+	 /**
+	  */
 	 public uogClass(String given, int idnum, int numCred){
 		 name = given;
 		 id = idnum;
 		 credits = numCred;
 	 }	 
+	 
+	 public String getName (){
+		 return this.name;
+	 }
+	 
+	 public void classDone(){
+		 isFinished = true;
+	 }
+	 
+	 public void classDetails(){
+		 System.out.print(" " + name + "|" + credits + "Credits | " + id + "\n");
+	 }
 }
 
 /**************************LIST OF CLASSES******************************
