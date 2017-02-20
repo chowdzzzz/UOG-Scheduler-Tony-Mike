@@ -32,23 +32,31 @@ public class generalEducation {
 		
 		switch (index){
 		case 1: //EN 111 Needs EN110 first before scheduling
+			if (classList.get(index).isFinished == false){
 			if (classList.get(0).isFinished==true){
 				classList.get(index).classDone();
 			currentSched.addClass(classList.get(index));
+			System.out.println("ADDED GE: " + index);
+			}
 			}
 			break;
 		case 2: //CO210 Needs EN110 first before scheduling as well
+			if (classList.get(index).isFinished == false){
 			if (classList.get(0).isFinished==true){
 			classList.get(index).classDone();
 			currentSched.addClass(classList.get(index));
+			System.out.println("ADDED GE: " + index);
+			}
 			}
 			break;
 		default: //Assume the rest of the General Eds don't have Pre Requisites
+			if (classList.get(index).isFinished == false){
 			classList.get(index).classDone();
 			currentSched.addClass(classList.get(index));
+			//System.out.println("ADDED GE: " + index);
+			}
 			break;
-	}
-		
+	}	
 	//System.out.println("ADDED: " + classList.get(index).name);
 	}
 }

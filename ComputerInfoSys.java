@@ -40,57 +40,154 @@ public class ComputerInfoSys extends degreeProgram {
 	 * trying to add.
 	 */
 	public void finishClass(int index, semSchedule currentSched){
-		this.classList.get(index).classDone();
-		currentSched.addClass(this.classList.get(index));
-		/*		switch (index){
-		case 0:
-			this.classList.get(index).isFinished = true;
-			currentSched.addClass(this.classList.get(index));
+				switch (index){
+		case 0: //BA110
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 1:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 2:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 3:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 4:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 5:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 6:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 7:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 8:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 9:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 10:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 11:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 12:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 13:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 14:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 15:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 16:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 17:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 18:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 19:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 20:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 21:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				}
 			break;
 		case 22:
-			break;*/
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				outOfClasses = true;
+			}
+			break;
+		case 23:
+			if (classList.get(index).isFinished == false){
+				this.classList.get(index).classDone();
+				currentSched.addClass(this.classList.get(index));
+				outOfClasses = true;
+			}
+			break;
 	}
 }	
-//}
+}
+
